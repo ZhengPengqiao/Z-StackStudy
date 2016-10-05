@@ -163,7 +163,7 @@
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\DebugTrace.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\DebugTrace.h</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.c</file>
-      <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT.h</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_APP.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.h</file>
@@ -1944,7 +1944,7 @@
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\DebugTrace.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\DebugTrace.h</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.c</file>
-      <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT.h</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_APP.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.h</file>
@@ -3781,7 +3781,7 @@
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\mac_rffrontend.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\DebugTrace.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.c</file>
-      <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT.h</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_APP.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.c</file>
       <file>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_DEBUG.c</file>
