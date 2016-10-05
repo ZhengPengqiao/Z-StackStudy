@@ -11,11 +11,12 @@
 #include "hal_led.h"
 #include "hal_key.h"
 #include "hal_uart.h"
+#include "hal_adc.h"
 #include "MT_UART.h"
 
 
 void SampleApp_HandleKeys( uint8 shift, uint8 keys );
-
+void sendTemp();
 /******************************************
 *              
 *     函数名称：SampleApp_Init
@@ -24,8 +25,7 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys );
 *******************************************/
 void SampleApp_Init( uint8 task_id )
 { 
-      
-    /*  串口操作  */
+    /*  串口操作 */
     MT_UartInit(); //配置串口
     MT_UartRegisterTaskID(task_id); //打开串口
     RegisterForKeys( task_id ); // 登记所有的按键事件
@@ -83,6 +83,20 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
       if ( keys & HAL_KEY_SW_6 ) //S1
       {
               HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
+              sendTemp();
       }
 }
 
+
+void sendTemp()
+{
+    unsigned char adc_val = 0;
+    unsigned char val[3];
+    
+    HalAdcInit();
+    adc_val = HalAdcRead(HAL_ADC_CHANNEL_0,HAL_ADC_RESOLUTION_8);
+    val[0] = adc_val % 100 / 10 + '0';
+    val[1] = adc_val % 10 + '0';
+   
+    HalUARTWrite(0 ,  val , 2);
+}

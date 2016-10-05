@@ -347,7 +347,7 @@
         </option>
         <option>
           <name>CCRequirePrototypes</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CCMultibyteSupport</name>
@@ -3486,7 +3486,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_UART.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UTIL.c</name>
@@ -3513,7 +3513,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\AddrMgr.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\APS.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\APS.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\aps_frag.h</name>
@@ -3525,13 +3525,13 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\aps_util.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\APSMEDE.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\APSMEDE.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\AssocList.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\BindingTable.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\BindingTable.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\NLMEDE.h</name>
@@ -3546,13 +3546,13 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\nwk_globals.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_util.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\reflecttrack.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\reflecttrack.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\rtg.h</name>
@@ -3720,7 +3720,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\zmac\f8w\zmac_cb.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\zmac\f8w\zmac_internal.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\zmac\f8w\zmac_internal.h</name>
     </file>
   </group>
   <group>

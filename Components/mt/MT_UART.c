@@ -112,8 +112,8 @@ void MT_UartInit ()
 
   /* UART Configuration */
   uartConfig.configured           = TRUE;
-  uartConfig.baudRate             = MT_UART_DEFAULT_BAUDRATE;  //选择波特率
-  uartConfig.flowControl          = MT_UART_DEFAULT_OVERFLOW;  //选择流控制
+  uartConfig.baudRate             = MT_UART_DEFAULT_BAUDRATE;
+  uartConfig.flowControl          = MT_UART_DEFAULT_OVERFLOW;
   uartConfig.flowControlThreshold = MT_UART_DEFAULT_THRESHOLD;
   uartConfig.rx.maxBufSize        = MT_UART_DEFAULT_MAX_RX_BUFF;
   uartConfig.tx.maxBufSize        = MT_UART_DEFAULT_MAX_TX_BUFF;
@@ -124,7 +124,7 @@ void MT_UartInit ()
 //#elif defined (ZAPP_P1) || defined (ZAPP_P2)
 //  uartConfig.callBackFunc         = MT_UartProcessZAppData;
 //#else
-  uartConfig.callBackFunc         = UartCallBackFunction;  //选择回调函数
+  uartConfig.callBackFunc         = UartCallBackFunction;
 //#endif
 
   /* Start UART */

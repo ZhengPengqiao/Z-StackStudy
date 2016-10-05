@@ -32,17 +32,3 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
               HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE); //反转小灯
       }
 }
-
-
-在文件MT_UART.c中
-在Z-stack提供的MT_UartInit()函数中配置串口，更改回调函数
-uartConfig.callBackFunc         = UartCallBackFunction;  //选择回调函数
-/*****************************************************************************
-*  函数名称  ： UartCallBackFunction
-*  函数介绍  ： 串口回调函数
-*            ：
-*    参数    ： port:串口号
-*            ： event:事件
-*   返回值   ： 无
-******************************************************************************/
-static void UartCallBackFunction(uint8 port , uint8 event);
