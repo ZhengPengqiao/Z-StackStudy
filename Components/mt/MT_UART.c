@@ -21,7 +21,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -46,7 +46,7 @@
 #include "MT.h"
 #include "MT_UART.h"
 #include "OSAL_Memory.h"
-
+#include "hal_lcd.h"
 
 /***************************************************************************************************
  * MACROS
@@ -62,6 +62,13 @@
 #define LEN_STATE      0x03
 #define DATA_STATE     0x04
 #define FCS_STATE      0x05
+
+
+#define MY_DEFINE_UART_PORT 0  //×Ô¶¨Òå´®¿ÚºÅ£¨0£¬1£©
+#define RX_MAX_LENGTH 20       //½ÓÊÕ»º³åÇø×î´óÖµ£º20¸ö×Ö½Ú
+uint8 RX_BUFFER[RX_MAX_LENGTH]; //½ÓÊÕ»º³åÇø
+static void UartCallBackFunction(uint8 port , uint8 event);
+
 
 /***************************************************************************************************
  *                                         GLOBAL VARIABLES
@@ -112,13 +119,13 @@ void MT_UartInit ()
   uartConfig.tx.maxBufSize        = MT_UART_DEFAULT_MAX_TX_BUFF;
   uartConfig.idleTimeout          = MT_UART_DEFAULT_IDLE_TIMEOUT;
   uartConfig.intEnable            = TRUE;
-#if defined (ZTOOL_P1) || defined (ZTOOL_P2)
-  uartConfig.callBackFunc         = MT_UartProcessZToolData;
-#elif defined (ZAPP_P1) || defined (ZAPP_P2)
-  uartConfig.callBackFunc         = MT_UartProcessZAppData;
-#else
-  uartConfig.callBackFunc         = NULL;
-#endif
+//#if defined (ZTOOL_P1) || defined (ZTOOL_P2)
+//  uartConfig.callBackFunc         = MT_UartProcessZToolData;
+//#elif defined (ZAPP_P1) || defined (ZAPP_P2)
+//  uartConfig.callBackFunc         = MT_UartProcessZAppData;
+//#else
+  uartConfig.callBackFunc         = UartCallBackFunction;
+//#endif
 
   /* Start UART */
 #if defined (MT_UART_DEFAULT_PORT)
@@ -426,5 +433,30 @@ void MT_UartAppFlowControl ( bool status )
 
 #endif //ZAPP
 
+
+/*****************************************************************************
+*  º¯ÊýÃû³Æ  £º UartCallBackFunction
+*  º¯Êý½éÉÜ  £º ´®¿Ú»Øµ÷º¯Êý
+*            £º
+*    ²ÎÊý    £º port:´®¿ÚºÅ
+*            £º event:ÊÂ¼þ
+*   ·µ»ØÖµ   £º ÎÞ
+******************************************************************************/
+static void UartCallBackFunction(uint8 port , uint8 event)
+{
+  uint8 RX_Length = 0; //½ÓÊÕµ½×Ö·û´®´óÐ¡
+  RX_Length = Hal_UART_RxBufLen(MY_DEFINE_UART_PORT); //¶ÁÈ¡½ÓÊÕ×Ö·û´®´óÐ¡£»
+  if(RX_Length != 0) //ÓÐÊý¾Ý´æÔÚ
+  {
+            //¶ÁÈ¡´®¿ÚÊý¾Ý£»
+        osal_memset(RX_BUFFER,0,sizeof(RX_BUFFER));
+        HalUARTRead(MY_DEFINE_UART_PORT , RX_BUFFER , RX_Length);
+        HalLcdWriteString( RX_BUFFER, HAL_LCD_LINE_3 );
+        //·¢ËÍ»Ø¸øµçÄÔ,Ê¹ÓÃ hal_uart.h µÄ½Ó¿Úº¯Êý£º
+        HalUARTWrite(MY_DEFINE_UART_PORT ,  RX_BUFFER , RX_Length);
+        
+        HalUARTWrite(MY_DEFINE_UART_PORT ,  "\n" , 1);
+  }
+}
 /***************************************************************************************************
 ***************************************************************************************************/
