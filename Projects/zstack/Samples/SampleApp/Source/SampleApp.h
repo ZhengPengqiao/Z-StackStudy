@@ -63,9 +63,10 @@ extern "C"
 #define SAMPLEAPP_DEVICE_VERSION     0
 #define SAMPLEAPP_FLAGS              0
 
-#define SAMPLEAPP_MAX_CLUSTERS       2
+#define SAMPLEAPP_MAX_CLUSTERS       3
 #define SAMPLEAPP_PERIODIC_CLUSTERID 1
 #define SAMPLEAPP_FLASH_CLUSTERID     2
+#define LED_TOGGLE_EVT                3
 
 // Send Message Timeout
 #define SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT   5000     // Every 5 seconds
@@ -96,7 +97,6 @@ extern void SampleApp_Init( uint8 task_id );
  * Task Event Processor for the Generic Application
  */
 extern UINT16 SampleApp_ProcessEvent( uint8 task_id, uint16 events );
-
 
 /*********************************************************************
 *********************************************************************/

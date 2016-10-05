@@ -10,14 +10,15 @@
 /* HAL */
 #include "hal_led.h"
 #include "hal_key.h"
-#include "hal_uart.h"
-#include "hal_adc.h"
 #include "MT_UART.h"
-#include "DHT11.h"
 
 
+
+//按键事件处理函数声明
 void SampleApp_HandleKeys( uint8 shift, uint8 keys );
-void sendTemp();
+uint8 current_ID;
+
+
 /******************************************
 *              
 *     函数名称：SampleApp_Init
@@ -26,9 +27,7 @@ void sendTemp();
 *******************************************/
 void SampleApp_Init( uint8 task_id )
 { 
-    /*  串口操作 */
-    MT_UartInit(); //配置串口
-    MT_UartRegisterTaskID(task_id); //打开串口
+    current_ID = task_id;
     RegisterForKeys( task_id ); // 登记所有的按键事件
 }
 
@@ -44,6 +43,12 @@ uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
       afIncomingMSGPacket_t *MSGpkt;
       (void)task_id;  // Intentionally unreferenced parameter
 
+      if ( events & LED_TOGGLE_EVT )
+      {
+          HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
+          return events ^ LED_TOGGLE_EVT; //清除事件
+      }
+
       if ( events & SYS_EVENT_MSG ) //接收系统消息再进行判断
       {
             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( task_id );
@@ -52,7 +57,7 @@ uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
               switch ( MSGpkt->hdr.event )
               {        
                    case KEY_CHANGE://按键事件
-                    SampleApp_HandleKeys(((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+                    SampleApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
                    break;
               }
 
@@ -83,33 +88,12 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
       
       if ( keys & HAL_KEY_SW_6 ) //S1
       {
-              HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
-              sendTemp();
+              //启动事件
+              osal_set_event( current_ID, LED_TOGGLE_EVT );
       }
-}
-
-
-void sendTemp()
-{
-    uint8 strData[20];
-    uint8 temp[3]; 
-    uint8 humidity[3];   
-
-    
-    DHT11();             //获取温湿度
-
-    //将温湿度的转换成字符串
-    temp[0]=wendu_shi+0x30;
-    temp[1]=wendu_ge+0x30;
-    humidity[0]=shidu_shi+0x30;
-    humidity[1]=shidu_ge+0x30;
-    
-    osal_memcpy(strData,"TEMP:",5);
-    osal_memcpy(&strData[5],temp,2);
-    osal_memcpy(&strData[7],"   ",3);
-    osal_memcpy(&strData[10],"Hum:",4);
-    osal_memcpy(&strData[14],humidity,2);
-    strData[16] = (uint8)'\n';
-    HalUARTWrite(0,strData, 16);
-    HalUARTWrite(0,"\n", 1); 
+      
+      if ( keys & HAL_KEY_SW_1 ) //S2
+      {
+              HalLedSet(HAL_LED_2,HAL_LED_MODE_TOGGLE);//反转小灯
+      }
 }

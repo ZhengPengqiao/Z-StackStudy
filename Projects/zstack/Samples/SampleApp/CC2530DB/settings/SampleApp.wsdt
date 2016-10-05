@@ -12,7 +12,7 @@
           
           
           
-        <Column0>226</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>280</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
         
@@ -33,7 +33,7 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>SampleApp</ExpandedNode><ExpandedNode>SampleApp/App</ExpandedNode><ExpandedNode>SampleApp/HAL</ExpandedNode><ExpandedNode>SampleApp/MT</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>SampleApp</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
@@ -53,14 +53,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\SampleApp.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>2638</SelStart><SelEnd>2638</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\SampleApp.c</Filename><XPos>0</XPos><YPos>90</YPos><SelStart>2908</SelStart><SelEnd>2908</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_uart.c</Filename><XPos>0</XPos><YPos>222</YPos><SelStart>7176</SelStart><SelEnd>7176</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\hal\include\hal_uart.h</Filename><XPos>0</XPos><YPos>162</YPos><SelStart>6716</SelStart><SelEnd>6728</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\readme.txt</Filename><XPos>0</XPos><YPos>49</YPos><SelStart>752</SelStart><SelEnd>752</SelEnd></Tab><ActiveTab>4</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\SampleApp.c</Filename><XPos>0</XPos><YPos>37</YPos><SelStart>1070</SelStart><SelEnd>1070</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\SampleApp.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>3027</SelStart><SelEnd>3066</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\osal\include\OSAL.h</Filename><XPos>0</XPos><YPos>156</YPos><SelStart>5147</SelStart><SelEnd>5198</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\readme.txt</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>1017</SelStart><SelEnd>1031</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-0294e020><key>iaridepm.enu1</key></Toolbar-0294e020></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>574</Bottom><Right>317</Right><x>-2</x><y>-2</y><xscreen>141</xscreen><yscreen>92</yscreen><sizeHorzCX>108295</sizeHorzCX><sizeHorzCY>126722</sizeHorzCY><sizeVertCX>245008</sizeVertCX><sizeVertCY>793388</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>107</Bottom><Right>1304</Right><x>-2</x><y>-2</y><xscreen>1306</xscreen><yscreen>109</yscreen><sizeHorzCX>1003072</sizeHorzCX><sizeHorzCY>150138</sizeHorzCY><sizeVertCX>108295</sizeVertCX><sizeVertCY>126722</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-0294e020><key>iaridepm.enu1</key></Toolbar-0294e020></Sizes></Row0><Row1><Sizes><Toolbar-0e6a4640><key>debuggergui.enu1</key></Toolbar-0e6a4640></Sizes></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>506</Bottom><Right>354</Right><x>-2</x><y>-2</y><xscreen>157</xscreen><yscreen>152</yscreen><sizeHorzCX>120584</sizeHorzCX><sizeHorzCY>209366</sizeHorzCY><sizeVertCX>273425</sizeVertCX><sizeVertCY>699725</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>175</Bottom><Right>1304</Right><x>-2</x><y>-2</y><xscreen>1306</xscreen><yscreen>177</yscreen><sizeHorzCX>1003072</sizeHorzCX><sizeHorzCY>243802</sizeHorzCY><sizeVertCX>120584</sizeVertCX><sizeVertCY>209366</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

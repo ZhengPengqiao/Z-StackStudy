@@ -34,43 +34,19 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
 }
 
 
-将DHT11.h,DHT11.c导入工程
 
-在按键中调用温湿度函数
-void SampleApp_HandleKeys( uint8 shift, uint8 keys ) 
+使用用户事件：
+1：定义事件
+#define LED_TOGGLE_EVT                3
+2：处理事件
+if ( events & LED_TOGGLE_EVT )
 {
-      (void)shift;  // Intentionally unreferenced parameter
-      
-      if ( keys & HAL_KEY_SW_6 ) //S1
-      {
-              HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
-              sendTemp();
-      }
+    HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
+    return events ^ LED_TOGGLE_EVT; //清除事件
 }
-
-
-向串口发送函数
-void sendTemp()
+3：启动事件
+if ( keys & HAL_KEY_SW_6 ) //S1
 {
-    uint8 strData[20];
-    uint8 temp[3]; 
-    uint8 humidity[3];   
-
-    
-    DHT11();             //获取温湿度
-
-    //将温湿度的转换成字符串
-    temp[0]=wendu_shi+0x30;
-    temp[1]=wendu_ge+0x30;
-    humidity[0]=shidu_shi+0x30;
-    humidity[1]=shidu_ge+0x30;
-    
-    osal_memcpy(strData,"TEMP:",5);
-    osal_memcpy(&strData[5],temp,2);
-    osal_memcpy(&strData[7],"   ",3);
-    osal_memcpy(&strData[10],"Hum:",4);
-    osal_memcpy(&strData[14],humidity,2);
-    strData[16] = (uint8)'\n';
-    HalUARTWrite(0,strData, 16);
-    HalUARTWrite(0,"\n", 1); 
+        //启动事件
+        osal_set_event( current_ID, LED_TOGGLE_EVT );
 }
