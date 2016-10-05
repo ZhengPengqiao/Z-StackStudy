@@ -275,8 +275,8 @@
         <option>
           <name>CCDefines</name>
           <state>ZIGBEEPRO</state>
-          <state>ZTOOL_P1</state>
           <state>xMT_TASK</state>
+          <state>ZTOOL_P1</state>
           <state>xMT_SYS_FUNC</state>
           <state>xMT_ZDO_FUNC</state>
           <state>LCD_SUPPORTED=DEBUG</state>
@@ -3300,7 +3300,7 @@
             <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_aes.h</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_dma.h</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_dma.h</name>
           </file>
           <file>
             <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_mcu.h</name>
@@ -3340,7 +3340,7 @@
       <group>
         <name>Common</name>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mac\LOW_LEVEL\srf04\mac_assert.h</name>
+          <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_assert.h</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_autopend.c</name>
@@ -3352,13 +3352,13 @@
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_backoff_timer.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mac\LOW_LEVEL\srf04\mac_backoff_timer.h</name>
+          <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_backoff_timer.h</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_low_level.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mac\LOW_LEVEL\srf04\mac_low_level.h</name>
+          <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_low_level.h</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_radio.c</name>
@@ -3376,7 +3376,7 @@
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_rx_onoff.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mac\LOW_LEVEL\srf04\mac_rx_onoff.h</name>
+          <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_rx_onoff.h</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\mac_sleep.c</name>
@@ -3435,7 +3435,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_AF.c</name>
@@ -3474,7 +3474,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_SYS.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_SYS.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_SYS.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_TASK.c</name>
@@ -3486,7 +3486,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_UART.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UTIL.c</name>
@@ -3510,10 +3510,10 @@
   <group>
     <name>NWK</name>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\AddrMgr.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\AddrMgr.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\APS.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\APS.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\aps_frag.h</name>
@@ -3525,13 +3525,13 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\aps_util.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\APSMEDE.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\APSMEDE.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\AssocList.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\BindingTable.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\BindingTable.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\NLMEDE.h</name>
@@ -3546,16 +3546,16 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\nwk_globals.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_util.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\reflecttrack.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\reflecttrack.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\nwk\rtg.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\nwk\rtg.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\sys\ZGlobals.c</name>
@@ -3687,13 +3687,13 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDNwkMgr.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDNwkMgr.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDNwkMgr.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDObject.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDObject.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDObject.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDProfile.c</name>
@@ -3720,7 +3720,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\zmac\f8w\zmac_cb.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\zmac\f8w\zmac_internal.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\zmac\f8w\zmac_internal.h</name>
     </file>
   </group>
   <group>
