@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-1000207770
+Checksum=235791536
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -30,5 +30,7 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Aliases]
-Count=0
+A0=_ "D:\Documents\CC2530Projects\Zigbee学习\3.串口与ADC\Components\osal\common\OSAL_Timers.c" ""
+A1=_ "D:\Documents\CC2530Projects\Zigbee学习\3.串口与ADC\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=2
 SuppressDialog=0

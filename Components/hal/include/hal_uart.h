@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+  PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -90,7 +90,7 @@ extern "C"
 #define HAL_UART_9_BITS_PER_CHAR    0x01
 
 /* Flow control */
-#define HAL_UART_FLOW_OFF   0x00
+#define HAL_UART_FLOW_OFF   0x00   
 #define HAL_UART_FLOW_ON    0x01
 
 /* Ports */
@@ -163,7 +163,7 @@ typedef union
 /***************************************************************************************************
  *                                            FUNCTIONS - API
  ***************************************************************************************************/
-/*
+/*  ´®¿Ú³õÊ¼»¯
  *  Initialize UART at the startup
  */
 extern void HalUARTInit ( void );
