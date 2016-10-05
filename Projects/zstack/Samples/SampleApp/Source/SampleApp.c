@@ -13,6 +13,7 @@
 #include "hal_uart.h"
 #include "hal_adc.h"
 #include "MT_UART.h"
+#include "DHT11.h"
 
 
 void SampleApp_HandleKeys( uint8 shift, uint8 keys );
@@ -90,13 +91,25 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
 
 void sendTemp()
 {
-    unsigned char adc_val = 0;
-    unsigned char val[3];
+    uint8 strData[20];
+    uint8 temp[3]; 
+    uint8 humidity[3];   
+
     
-    HalAdcInit();
-    adc_val = HalAdcRead(HAL_ADC_CHANNEL_0,HAL_ADC_RESOLUTION_8);
-    val[0] = adc_val % 100 / 10 + '0';
-    val[1] = adc_val % 10 + '0';
-   
-    HalUARTWrite(0 ,  val , 2);
+    DHT11();             //获取温湿度
+
+    //将温湿度的转换成字符串
+    temp[0]=wendu_shi+0x30;
+    temp[1]=wendu_ge+0x30;
+    humidity[0]=shidu_shi+0x30;
+    humidity[1]=shidu_ge+0x30;
+    
+    osal_memcpy(strData,"TEMP:",5);
+    osal_memcpy(&strData[5],temp,2);
+    osal_memcpy(&strData[7],"   ",3);
+    osal_memcpy(&strData[10],"Hum:",4);
+    osal_memcpy(&strData[14],humidity,2);
+    strData[16] = (uint8)'\n';
+    HalUARTWrite(0,strData, 16);
+    HalUARTWrite(0,"\n", 1); 
 }
