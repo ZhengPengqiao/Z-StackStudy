@@ -10,14 +10,11 @@
 /* HAL */
 #include "hal_led.h"
 #include "hal_key.h"
+#include "hal_uart.h"
 #include "MT_UART.h"
 
 
-
-//按键事件处理函数声明
 void SampleApp_HandleKeys( uint8 shift, uint8 keys );
-
-
 
 /******************************************
 *              
@@ -27,6 +24,10 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys );
 *******************************************/
 void SampleApp_Init( uint8 task_id )
 { 
+      
+    /*  串口操作  */
+    MT_UartInit(); //配置串口
+    MT_UartRegisterTaskID(task_id); //打开串口
     RegisterForKeys( task_id ); // 登记所有的按键事件
 }
 
@@ -50,7 +51,7 @@ uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
               switch ( MSGpkt->hdr.event )
               {        
                    case KEY_CHANGE://按键事件
-                    SampleApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+                    SampleApp_HandleKeys(((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
                    break;
               }
 
@@ -83,9 +84,5 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
       {
               HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
       }
-      
-      if ( keys & HAL_KEY_SW_1 ) //S2
-      {
-              HalLedSet(HAL_LED_2,HAL_LED_MODE_TOGGLE);//反转小灯
-      }
 }
+
