@@ -81,6 +81,11 @@ void SampleApp_HandleKeys( uint8 shift, uint8 keys )
       
       if ( keys & HAL_KEY_SW_6 ) //S1
       {
-
+              HalLedSet(HAL_LED_1,HAL_LED_MODE_TOGGLE);//反转小灯
+      }
+      
+      if ( keys & HAL_KEY_SW_1 ) //S2
+      {
+              HalLedSet(HAL_LED_2,HAL_LED_MODE_TOGGLE);//反转小灯
       }
 }
